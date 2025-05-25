@@ -69,5 +69,6 @@ export EDITOR="vim"
 export NODE_REPL_HISTORY=''
 export PIPENV_VENV_IN_PROJECT=1
 export POETRY_VIRTUALENVS_IN_PROJECT=1
+export ELECTRON_OZONE_PLATFORM_HINT=auto
 
 [ -r "$HOME/.custom-shellprofile" ] && source "$HOME/.custom-shellprofile"
