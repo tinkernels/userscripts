@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-# shellcheck disable=SC1091,SC2034,SC2016
-# Customize zsh PROMPT, with ZSH_THEME=smt
-[ -n "$ZSH_NAME" ] && PROMPT='%{$fg[blue]%}<-%{$fg_bold[blue]%} %! $(prompt_char) $(git_prompt_status) ${return_status}%{$reset_color%}
-%{$fg_bold[green]%}%n@%m %{$fg[blue]%}%D{[%H:%M:%S]} %{$reset_color%}%{$fg[white]%}[%~]%{$reset_color%} $(git_prompt_short_sha)$(git_prompt_info)
-%{$fg[blue]%}->%{$fg_bold[blue]%} %#%{$reset_color%} ' && RPROMPT=""
-
 source "$HOME/.profile"
 
 alias rt='tput reset'
@@ -150,7 +144,6 @@ try-pixi-env-() {
         }
     }
 }
-try-pixi-env-
 
 pixi-init-() {
     pixi init --platform linux-64 --platform linux-aarch64 --platform osx-64 --platform osx-arm64 --platform win-64 "$@"
