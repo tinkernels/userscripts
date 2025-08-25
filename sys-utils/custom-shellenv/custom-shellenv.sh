@@ -30,4 +30,4 @@ for F in "$HOME/.zshrc" "$HOME/.bashrc"; do
 done
 
 # .zshrc
-grep -qE '^[[:blank:]]*ZSH_THEME="smt"' "$HOME/.zshrc" || sed -i -r 's:^[[:blank:]]*ZSH_THEME=.*$:ZSH_THEME="smt":g' "$HOME/.zshrc"
+grep -qE '^[[:blank:]]*ZSH_THEME="ys"' "$HOME/.zshrc" || sed -i -r 's:^[[:blank:]]*ZSH_THEME=.*$:ZSH_THEME="ys":g' "$HOME/.zshrc"
