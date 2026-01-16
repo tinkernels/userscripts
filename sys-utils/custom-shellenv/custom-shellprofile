@@ -11,15 +11,8 @@ append-path- () {
 }
 
 # nvm
-NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" && export NVM_DIR
-[ -d "$NVM_DIR/versions/node" ] && {
-    NVM_LATEST_V=$(find "$NVM_DIR/versions/node" -mindepth 1 -maxdepth 1 -type d | sed 's:.*/::g' | sort -rV | head -n 1)
-}
-[ -n "$NVM_LATEST_V" ] && {
-    append-path- "$NVM_DIR/versions/node/$NVM_LATEST_V/bin"
-}
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" --no-use
-unset NVM_LATEST_V
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # rbenv
 command -v rbenv >/dev/null && {
